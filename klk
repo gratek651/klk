@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Kalkulator</title>
+	<link rel="stylesheet" type="text/css" href="k.css">
+	<script type="text/javascript" src="jsk.js"></script>
+</head>
+<body>
+<div id="all">
+<div id="ekran"></div>
+<div id="ok">
+<input id="jeden" type="button" value="1" class="liczby" onclick="dopisz(1)" onmouseover="zmienklase()" onmouseleave="zjechanie()">
+<input id="2" type="button" value="2" class="liczby" onclick="dopisz(2)" onmouseover="zmienklase2()" onmouseleave="zjechanie()">
+<input id="3" type="button" value="3" class="liczby" onclick="dopisz(3)" onmouseover="zmienklase3()" onmouseleave="zjechanie()">
+<input id="+" type="button" value="+" class="znaki" onclick="dopisz('+')" onmouseover="zmienklaseplus()" onmouseleave="zjechanie()"><br>
+<input id="4" type="button" value="4" class="liczby" onclick="dopisz(4)" onmouseover="zmienklase4()" onmouseleave="zjechanie()">
+<input id="5" type="button" value="5" class="liczby" onclick="dopisz(5)" onmouseover="zmienklase5()" onmouseleave="zjechanie()">
+<input id="6" type="button" value="6" class="liczby" onclick="dopisz(6)" onmouseover="zmienklase6()" onmouseleave="zjechanie()">
+<input id="-" type="button" value="-" class="znaki" onclick="dopisz('-')"onmouseover="zmienklaseminus()" onmouseleave="zjechanie()"><br>
+<input id="7" type="button" value="7" class="liczby" onclick="dopisz(7)"onmouseover="zmienklase7()" onmouseleave="zjechanie()">
+<input id="8" type="button" value="8" class="liczby" onclick="dopisz(8)" onmouseover="zmienklase8()" onmouseleave="zjechanie()">
+<input id="9" type="button" value="9" class="liczby" onclick="dopisz(9)"onmouseover="zmienklase9()" onmouseleave="zjechanie()">
+<input id="*" type="button" value="*" class="znaki" onclick="dopisz('*')"onmouseover="zmienklasemnozenie()" onmouseleave="zjechanie()"><br> 
+<input id="0" type="button" value="0" class="zero" onclick="dopisz(0)"onmouseover="zmienklase0()" onmouseleave="zjechanie()">
+<input id="." type="button" value="." class="znaki" onclick="dopisz('.')"onmouseover="zmienklasekropka()" onmouseleave="zjechanie()">
+
+<input id="/" type="button" value="/" class="znaki" onclick="dopisz('/')"onmouseover="zmienklasedzielenie()" onmouseleave="zjechanie()">
+<br>
+<input id="cls" type="button" value="AC" class="ac" onclick="czysc()"onmouseover="zmienklaseczyszczenie()" onmouseleave="zjechanie()">
+<input id="(" type="button" value="(" class="znaki" onclick="dopisz('(')"onmouseover="zmienklasenawias1()" onmouseleave="zjechanie()">
+<input id=")" type="button" value=")" class="znaki" onclick="dopisz(')')"onmouseover="zmienklasenawias2()" onmouseleave="zjechanie()">
+<input id="**" type="button" value="^" class="znaki" onclick="dopisz('**')"onmouseover="zmienklasepotega()" onmouseleave="zjechanie()">
+	
+<div id="rownasie"><input id="=" type="button" value="=" class="rowna" onclick="oblicz()"onmouseover="zmienklasewynik()" onmouseleave="zjechanie()"></div>
+</div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+	function dopisz(znak) {
+		var naEkranie = document.getElementById('ekran').innerText+znak;
+		document.getElementById('ekran').innerText=naEkranie; 
+	
+}
+function oblicz()
+{
+	var naEkranie=document.getElementById('ekran').innerText;
+	var wynik= eval(naEkranie);
+	document.getElementById('ekran').innerText=wynik;
+
+	Math.sqrt(1);
+	document.getElementById('ekran').innerText=wynik;
+	//var 
+	//document.getElementById('wynik').innerText;
+}
+function czysc() {
+	document.getElementById('ekran').innerText = "";
+}
+function zmienklase(){
+	document.getElementById("jeden").className="zmiana";
+}
+function zmienklase2(){
+	document.getElementById("2").className="zmiana";
+}	
+ 	function zmienklase3(){
+	document.getElementById("3").className="zmiana";}
+	function zmienklase4(){
+	document.getElementById("4").className="zmiana";}
+	function zmienklase5(){
+	document.getElementById("5").className="zmiana";}
+	function zmienklase6(){
+	document.getElementById("6").className="zmiana";}
+	function zmienklase7(){
+	document.getElementById("7").className="zmiana";}
+	function zmienklase8(){
+	document.getElementById("8").className="zmiana";}
+	function zmienklase9(){
+	document.getElementById("9").className="zmiana";}
+	function zmienklase0(){
+	document.getElementById("0").className="zmiana0";}
+	function zmienklaseplus(){
+	document.getElementById("+").className="zmiana1";}
+	function zmienklaseminus(){
+	document.getElementById("-").className="zmiana1";}
+	function zmienklasemnozenie(){
+	document.getElementById("*").className="zmiana1";}
+	function zmienklasedzielenie(){
+	document.getElementById("/").className="zmiana1";}
+	function zmienklasepotega(){
+	document.getElementById("**").className="zmiana1";}
+	function zmienklasewynik(){
+	document.getElementById("=").className="zmiana2";}
+	function zmienklasekropka(){
+	document.getElementById(".").className="zmiana1";}
+	function zmienklasenawias1(){
+	document.getElementById("(").className="zmiana1";}
+	function zmienklasenawias2(){
+	document.getElementById(")").className="zmiana1";}
+	function zmienklaseczyszczenie(){
+	document.getElementById("cls").className="zmiana3";}
+
+
+function zjechanie(){
+	document.getElementById("jeden").className="zjechac";
+	document.getElementById("2").className="zjechac";
+	document.getElementById("3").className="zjechac";
+	document.getElementById("4").className="zjechac";
+	document.getElementById("5").className="zjechac";
+	document.getElementById("6").className="zjechac";
+	document.getElementById("7").className="zjechac";
+	document.getElementById("8").className="zjechac";
+	document.getElementById("9").className="zjechac";
+	document.getElementById("0").className="zjechac0";
+	document.getElementById("+").className="zjechac1";
+	document.getElementById("-").className="zjechac1";
+	document.getElementById("*").className="zjechac1";
+	document.getElementById("/").className="zjechac1";
+	document.getElementById("**").className="zjechac1";
+	document.getElementById(".").className="zjechac1";
+	document.getElementById("(").className="zjechac1";
+	document.getElementById(")").className="zjechac1";
+	document.getElementById("=").className="zjechac2";
+	document.getElementById("cls").className="zjechac3";
+}
+
+
+
+
+
+#all{
+	font-size: 22px;
+	font-weight: 400;
+	font-variant: initial;
+	position: absolute;
+	width: 280px;
+	height: 380px;
+	background-color: slategrey;
+	border-radius: 2%;
+	margin: 50px;
+	left: 30px;
+	border: solid 2.5px;
+
+}
+#ekran{
+	margin-left: 15px;
+	margin-top: 10px;
+	background-color: limegreen;
+	border: solid 1px;
+	width: 250px;
+	height: 50px;
+	left: 70px;
+	align-content: center;
+	text-align: right;
+	font-size: 40px;
+	font-family: 'Courier New', monospace;
+	border: solid 2px;
+}
+#ok{
+	margin-top: 5px;
+	align-content: center;
+	margin-left: 30px;
+}
+.liczby{
+	border-radius: 100%;
+	font-size: 30px;
+	width: 50px;
+	height: 50px;
+	background-color: aliceblue;
+}
+.znaki{
+	border-radius: 100%;
+	font-size: 30px;
+	width: 50px;
+	height: 50px;
+	background-color: #DBE9FA;
+
+}
+.zmiana{
+	border-radius: 100%;
+	font-size: 30px;
+	width: 50px;
+	height: 50px;
+	background-color: skyblue;
+}
+.zjechac{
+	border-radius: 100%;
+	font-size: 30px;
+	width: 50px;
+	height: 50px;
+	background-color: aliceblue;
+}
+.zjechac1{
+	border-radius: 100%;
+	font-size: 30px;
+	width: 50px;
+	height: 50px;
+	background-color: #DBE9FA;
+}
+.zmiana0{
+	border-radius: 40%;
+	font-size: 30px;
+	width: 105px;
+	height: 50px;
+	background-color: skyblue;
+}
+.zero{
+	border-radius: 40%;
+	font-size: 30px;
+	width: 105px;
+	height: 50px;
+	background-color: aliceblue;
+}
+.zjechac0{
+		border-radius: 40%;
+	font-size: 30px;
+	width: 105px;
+	height: 50px;
+	background-color: aliceblue;
+}
+.zmiana2{
+	border-radius: 20%;
+	font-size: 30px;
+	width: 215px;
+	height: 50px;
+	background-color: #00BFFF;
+}
+#rownasie{
+	padding: 1px;
+}
+.rowna{
+	border-radius: 20%;
+	font-size: 30px;
+	width: 215px;
+	height: 50px;
+	background-color: #BDEDFF;
+}
+.zjechac2{
+	border-radius: 20%;
+	font-size: 30px;
+	width: 215px;
+	height: 50px;
+	background-color: #BDEDFF;
+}
+.ac{
+	border-radius: 100%;
+	font-size: 30px;
+	width: 50px;
+	height: 50px;
+	background-color: #3090C7;
+}
+.zjechac3{
+	border-radius: 100%;
+	font-size: 30px;
+	width: 50px;
+	height: 50px;
+	background-color: #3090C7;
+}
+.zmiana3{
+	border-radius: 100%;
+	font-size: 30px;
+	width: 50px;
+	height: 50px;
+	background-color: #2B65EC;
+}
+.zmiana1{
+	border-radius: 100%;
+	font-size: 30px;
+	width: 50px;
+	height: 50px;
+	background-color: skyblue;
+}
